@@ -1,6 +1,6 @@
 {
   "name": "express-hello-world",
-  "version": "2023 r2",
+  "version": "2023 r3",
   "description": "Express Hello World on Render",
   "main": "app.js",
   "repository": "https://github.com/render-examples/express-hello-world",
@@ -27,7 +27,8 @@
     "sqlite3": "^5.1.6",
     "util": "^0.12.5",
     "xlsx": "^0.18.5",
-    "xml-js": "^1.6.11"
+    "xml-js": "^1.6.11",
+    "yarn": "^1.22.19"
   },
   "engines": {
     "node": ">=14"
