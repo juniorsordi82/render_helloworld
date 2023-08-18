@@ -1,0 +1,55 @@
+<div>
+    <div class="page-header">
+        <div>
+            <h1 class="page-title" ng-bind="title"></h1>
+        </div>
+        <div class="ms-auto pageheader-btn">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Financeiro</li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-md-6 col-xl-6">
+            <div class="card overflow-hidden">
+                <div class="card-header border-bottom">
+                    <h4 class="card-title fw-semibold">Nova <span ng-bind="title"></span></h4>
+                </div>
+                <div class="card-body">
+                    <form ng-submit="salvarContaBancaria(form)">
+                        <div class="form-group"> 
+                            <label for="field1">Nome</label> 
+                            <input type="text" class="form-control" id="field1" placeholder="Digite o nome" ng-model="form.nome"> 
+                        </div>
+                        <div class="form-group"> 
+                            <label for="field2">Banco</label> 
+                            <input type="text" class="form-control" id="field2" placeholder="Banco" ng-model="form.banco"> 
+                        </div>
+                        <div class="form-group"> 
+                            <label for="field2a">Agência</label> 
+                            <input type="text" class="form-control" id="field2a" placeholder="Agência" ng-model="form.agencia"> 
+                        </div>
+                        <div class="form-group"> 
+                            <label for="field2b">Conta</label> 
+                            <input type="text" class="form-control" id="field2b" placeholder="Conta" ng-model="form.numero_conta"> 
+                        </div>
+                        <div class="form-group"> 
+                            <label for="field3">Saldo Inicial</label> 
+                            <input type="text" class="form-control" id="field3" placeholder="Saldo Inicial" ng-model="form.saldo_inicial" ui-money-mask="2"> 
+                        </div>
+                        <div class="form-group"> 
+                            <label for="field4">Limite</label> 
+                            <input type="text" class="form-control" id="field4" placeholder="Limite" ng-model="form.limite" ui-money-mask="2"> 
+                        </div>
+                        <div class="form-group"> 
+                            <label for="field5">Tipo de Conta</label> 
+                            <select id="field5" class="form-control" ng-model="form.tipo_conta" ng-options="item.id as item.nome for item in tiposContasBancarias"></select>
+                        </div>
+                        <button type="submit" class="btn btn-success mt-3">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
